@@ -1,19 +1,23 @@
-# ☄️ LiquidSwap | The Fastest DEX on Stellar
+# ☄️ GKTSwap | The Fastest DEX on Stellar
 
-LiquidSwap is a next-generation decentralized exchange built on the Stellar Testnet. It leverages Stellar's native Liquidity Pools (AMM) to provide instant swaps, deep liquidity, and institutional-grade security with an ultra-premium glassmorphic interface.
+GKTSwap is a next-generation decentralized exchange built on the Stellar Testnet. It leverages Stellar's native Liquidity Pools (AMM) to provide instant swaps, deep liquidity, and institutional-grade security with an ultra-premium glassmorphic interface, powered by the protocol's native **LQID** token.
 
-[![CI/CD Pipeline](https://github.com/parth1241/liquidswap/actions/workflows/ci.yml/badge.svg)](https://github.com/parth1241/liquidswap/actions)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-cyan?style=for-the-badge&logo=vercel)](https://liquidswap-iota.vercel.app/)
+[![CI/CD Pipeline](https://github.com/ahsdnjasd/gkt-swap/actions/workflows/ci.yml/badge.svg)](https://github.com/ahsdnjasd/gkt-swap/actions)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-cyan?style=for-the-badge&logo=netlify)](https://unrivaled-tarsier-375dd1.netlify.app/)
 
-**Live Demo**: [https://liquidswap-iota.vercel.app/](https://liquidswap-iota.vercel.app/)
+**Live Demo**: [https://unrivaled-tarsier-375dd1.netlify.app/](https://unrivaled-tarsier-375dd1.netlify.app/)
 
 ---
 
-## 📱 Mobile Responsive View
+## 🖼️ Platform Interface
 
-LiquidSwap is fully optimized for mobile devices, providing a seamless trading experience on the go.
+GKTSwap provides an ultra-premium, light-themed glassmorphic interface designed for clarity and speed.
 
-![Mobile Responsive View](./mobile_view.png)
+### Desktop Dashboard
+![Desktop Dashboard](./public/screenshots/dashboard.png)
+
+### Mobile Trading Experience
+![Mobile Demo](./public/screenshots/mobile_demo.png)
 
 ---
 
@@ -21,7 +25,7 @@ LiquidSwap is fully optimized for mobile devices, providing a seamless trading e
 
 The protocol is officially deployed and initialized on the Stellar Testnet.
 
-- **LQID Issuer Address**: [`GCDAND5QSCVFFEDUCK62VEZASVPYOUATCMJ4EXAUVEOUPILOJDDEFUTZ`](https://stellar.expert/explorer/testnet/account/GCDAND5QSCVFFEDUCK62VEZASVPYOUATCMJ4EXAUVEOUPILOJDDEFUTZ)
+- **LQID Issuer Address**: `GCDAND5QSCVFFEDUCK62VEZASVPYOUATCMJ4EXAUVEOUPILOJDDEFUTZ`
 - **Asset Code**: `LQID`
 - **Native Pool ID**: `d36b6d8e280ed87f58d7a984cc4e3dbbcb2e81b127947ccd6deb16fec06e567b`
 - **Native Pool Address**: `GC7SEQUPZUQSFX4HZECHCF5CSD7VYUVXCDREQBHQVS5BLDCOESCD33HL`
@@ -32,17 +36,23 @@ The protocol is officially deployed and initialized on the Stellar Testnet.
 
 ---
 
-## 🏗️ Advanced Contract Architecture
+## 📜 Soroban Smart Contracts
 
+The project includes production-ready Soroban smart contracts located in the `/contracts` directory:
+
+### 🏗️ Advanced Contract Architecture
 LiquidSwap implements a dual-contract architecture to demonstrate advanced Soroban patterns:
 
-1. **`liquid_token`**: A custom Soroban token implementation (SEP-41) that manages the protocol's native liquidity currency.
-2. **`liquid_vault`**: An inter-contract execution layer that performs **Inter-contract calls** to the token contract for secure deposits and account management.
+- **liquid_token**: A custom Soroban token implementation (SEP-41) that manages the protocol's native liquidity currency (**LQID**).
+- **liquid_vault**: An inter-contract execution layer that performs **Inter-contract calls** to the token contract for secure deposits and account management.
 
-### Key Patterns:
+#### Key Patterns:
 - **Inter-contract Calls**: The Vault contract invokes the Token contract's `transfer` method to verify and execute on-chain swaps.
-- **Custom Asset Logic**: Implementation of a decentralized minting and distribution mechanism for the LQID token.
+- **Custom Asset Logic**: Implementation of a decentralized minting and distribution mechanism for the **LQID** token.
 - **CI/CD Integration**: Every contract change is automatically validated via our GitHub Actions pipeline (Rust/WASM build checks).
+
+
+---
 
 
 ---
@@ -76,7 +86,3 @@ LiquidSwap implements a dual-contract architecture to demonstrate advanced Sorob
 
 ---
 
-## ✅ CI/CD Status
-Every commit is automatically validated and deployed via our Vercel integration, ensuring a 100% type-safe and lint-free production environment.
-
-![CI/CD Build](https://img.shields.io/badge/Build-Passing-success?style=flat-square&logo=github-actions)
